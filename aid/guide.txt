@@ -8,7 +8,7 @@ SOUVENIR BOOK
 5. Store in DB
 6. View, sort, hide
 
-7. If could.. user login.
+7. If could.. password.
 
 to do
 
