@@ -1,0 +1,20 @@
+*************
+SOUVENIR BOOK
+*************
+1. welcome home page
+2. Add, Edit with History, star
+3. Text decoration
+4. Insert image, auto align
+5. Store in DB
+6. View, sort, hide
+
+7. If could.. user login.
+
+to do
+
+initialize project
+  npm init
+
+installing dependencies
+  npm install "package name" --save
+

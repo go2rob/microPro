@@ -1,0 +1,25 @@
+{
+  "name": "law2cf",
+  "version": "1.0.0",
+  "description": "look at where we came from",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/go2rob/microPro.git"
+  },
+  "keywords": [
+    "souvenir"
+  ],
+  "author": "robincEPtion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/go2rob/microPro/issues"
+  },
+  "homepage": "https://github.com/go2rob/microPro#readme"
+}
