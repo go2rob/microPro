@@ -25,7 +25,8 @@
   "homepage": "https://github.com/go2rob/microPro#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "pg": "^7.3.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
