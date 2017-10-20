@@ -8,6 +8,6 @@ things to work on
 
 1. Jquery
 2. Lodash
-3.
+3. Promises & Generators
 
 

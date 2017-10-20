@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-register --no-deprecation",
+    "start": "http-server -p 8888 -c-1",
+    "test": "mocha --compilers js:babel-register --no-deprecation --require ./modules/*@(.js|.jsx)",
     "autotest": "./node_modules/.bin/supervisor -q -n exit -x ./node_modules/.bin/mocha -- -b --compilers js:babel-register --no-deprecation"
   },
   "repository": {
@@ -25,12 +26,18 @@
   "homepage": "https://github.com/go2rob/microPro#readme",
   "dependencies": {
     "chai": "^4.1.2",
+    "jquery": "^3.2.1",
     "mocha": "^4.0.1",
-    "pg": "^7.3.0"
+    "pg": "^7.3.0",
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
+    "jsdom": "11.3.0",
+    "jsdom-global": "3.0.2",
     "supervisor": "~0.5.2"
   }
 }

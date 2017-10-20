@@ -11,11 +11,10 @@ SOUVENIR BOOK
 7. If could.. password.
 
 to do
+-----
 
 initialize project
   npm init
 
 installing dependencies
   npm install "package name" --save
-
-Test:
