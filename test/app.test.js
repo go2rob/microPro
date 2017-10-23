@@ -1,29 +1,13 @@
-"use strict"
-
-// Imports
-import app from "../modules/app.js"
-import index from "../modules/index.js"
-
-// requirements
-const assert = require('assert')
-const expect = require('chai').expect
-const should = require('chai').should()
-
+import {app, index} from "../modules"
 
 describe("Module", () => {
   it('app.js should exist', () => {
-    expect(app).to.exist
+    should(app).exist
   })
   it('index.js should exist', () => {
-    expect(index).to.exist
+    should(index).exist
   })
 })
-
-// describe("")
-
-
-
-
 
 describe("help", () => {
   it('checking how expect works', () => {
@@ -31,8 +15,9 @@ describe("help", () => {
     // expect({a: 1}).to.deep.equal({a: 1})
     // expect({a: 1}).to.not.equal({a: 1})
     // expect([{}]).to.not.have.members([{}])
-    // // with message
-    expect(app, 'nooo why fail??').to.exist
-
+  })
+  it('checking how assert works', () => {
+    // assert.property({a: 1},'a')
+    // assert.isBoolean(true)
   })
 })

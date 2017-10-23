@@ -6,10 +6,22 @@
   "directories": {
     "test": "test"
   },
+  "watch": {
+    "test": {
+      "patterns": [
+        "src",
+        "test"
+      ],
+      "extensions": "js,jsx",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 2500
+    }
+  },
   "scripts": {
     "start": "http-server -p 8888 -c-1",
-    "test": "mocha --compilers js:babel-register --no-deprecation --require ./modules/*@(.js|.jsx)",
-    "autotest": "./node_modules/.bin/supervisor -q -n exit -x ./node_modules/.bin/mocha -- -b --compilers js:babel-register --no-deprecation"
+    "watch": "npm-watch",
+    "test": "mocha --compilers js:babel-register --no-deprecation --include .test/testHelper.js \"./test/*@(.js)\""
   },
   "repository": {
     "type": "git",
@@ -26,8 +38,8 @@
   "homepage": "https://github.com/go2rob/microPro#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "jquery": "^3.2.1",
     "mocha": "^4.0.1",
+    "npm-watch": "^0.3.0",
     "pg": "^7.3.0",
     "webpack": "^3.8.1"
   },
