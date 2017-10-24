@@ -1,11 +1,15 @@
-// import 'jsdom-global/register'
-// import jQuery from 'jquery'
-// import $ from "jquery";
-// import app from "./app.js"
-$(document).ready( () => {
-    // all custom jQuery will go here
-  let src1 = "../images/bgimg.jpg"
-  $('body').html('<img/>')
-  $('img').addClass('robin')
-  $('.robin').attr("src", src1).css('height', 600)
+define(['jquery', 'lodash'], ($, _) => {
+  $(document).ready( () => {
+    let src1 = "../images/bgimg.jpg"
+    let src2 = "../images/totem.jpg"
+    let height = $(window).height()
+    $('body').append('<img/>')
+    $('img').addClass('home-page-image')
+    $('.home-page-image').attr('src', src1).css('height', height)
+    $('<div/>').appendTo('body')
+    // $('<img/>').appendTo('div')
+    // $('div img').addClass('sec')
+    // $('div').addClass('test-image')
+    // $('.sec').attr('src', src2)
+  })
 })

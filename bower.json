@@ -18,8 +18,11 @@
     "tests"
   ],
   "dependencies": {
+    "requirejs": "^2.3.5",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
-    "jquerydeparam": "^0.1.1"
+    "jquerydeparam": "^0.1.1",
+    "lodash": "^4.17.4",
+    "bootstrap": "^3.3.7"
   }
 }
