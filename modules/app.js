@@ -1,1 +1,4 @@
-require(['index'])
+  import {index} from "./in"
+
+export default () => {
+}

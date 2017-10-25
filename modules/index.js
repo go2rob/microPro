@@ -1,3 +1,5 @@
+export default () => {
+
 define(['jquery', 'lodash'], ($, _) => {
   $(document).ready( () => {
     let src1 = "../images/bgimg.jpg"
@@ -6,10 +8,11 @@ define(['jquery', 'lodash'], ($, _) => {
     $('body').append('<img/>')
     $('img').addClass('home-page-image')
     $('.home-page-image').attr('src', src1).css('height', height)
-    $('<div/>').appendTo('body')
+    // $('<div/>').appendTo('body')
     // $('<img/>').appendTo('div')
     // $('div img').addClass('sec')
     // $('div').addClass('test-image')
     // $('.sec').attr('src', src2)
   })
 })
+}

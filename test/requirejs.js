@@ -1,11 +1,3 @@
-"use strict"
-
-
-import chai from "chai"
-global.assert = chai.assert
-global.should = chai.should
-global.expect = chai.expect
-
 // requirejs.config({
 //     baseUrl: '../',
 //     paths: {
@@ -17,4 +9,3 @@ global.expect = chai.expect
 //         // appTest: 'test/appTest.js'
 //     }
 // });
-// // S
