@@ -1,5 +1,4 @@
 import {app, index} from "../modules"
-
 describe("Module", () => {
   it('app.js should exist', () => {
     should(app).exist
@@ -8,6 +7,12 @@ describe("Module", () => {
     should(index).exist
   })
 })
+// describe("node-postgres", () => {
+//   it('should connect to database', () => {
+//     should(app.connectionInfo()).to.be("You are connected to database \"robin\" as user \"robin\
+//       \" via socket in \"/var/run/postgresql\" at port \"5432\".")
+//   })
+// })
 
 describe("help", () => {
   it('checking how expect works', () => {

@@ -1,5 +1,4 @@
-import {index} from "./"
-
+import index from "./"
 export default () => {
 
 }
