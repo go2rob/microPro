@@ -1,0 +1,4 @@
+remember for later
+
+peer dependencies
+popper js for Bootstrap js
