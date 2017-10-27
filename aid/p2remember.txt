@@ -1,4 +1,61 @@
 remember for later
+******************
 
 peer dependencies
-popper js for Bootstrap js
+  popper js for Bootstrap js
+
+index module
+  should have create function
+  should have 
+
+
+
+Deprecations
+************
+
+(node:12198) DeprecationWarning: "--compilers" will be removed in a future version of Mocha; see https://git.io/vdcSr for more info
+  Module 
+  last used on 27.10.2017
+
+
+
+
+Traces (remembered)
+******
+Mocha unable to read ES6
+  installed babel(register, loader, env setup(.babelrc))
+    babel asked to install webpack "yourself"(guessing its or later)
+      installed webpack
+
+When trying to load supporting libraries in reliable way(like in JS files, not as script in HTML)
+  encountered the existence of "requirejs"
+    2 days worked on to learn & finally configured in a common file(requirejs.config)
+    -supported great for browser but testfiles
+        no Idea what to do, dropped there...
+  alternatives for requirejs... had come to know about "webpack is best doing the same" which I have already have
+        configuration not understandable.. skipping for now
+
+When loaded on browser 
+    (a) Unexpected token import
+            solved by changing type attribute of script tag from "text.javascript" to "module"
+    (b) Failed to load module script: The server responded with a non-JavaScript MIME type of "text/html". Strict MIME type checking is enforced for module scripts per 
+        -HTML spec.
+            referred from https://stackoverflow.com/questions/46138375/trouble-with-es6-modules to change
+              suggested to install http-server npm - which I already have -- installed again.
+    (c) app.js files retained by history
+          finally by getting it worked by deleting history
+    (d) require is undefined (while importing jquery)
+          reason - require is executable on node.js, not readable by browser (https://stackoverflow.com/a/45723592/8359363)
+        what to do?????????
+          bundler needed - (requirejs, browserify, webpack,..)
+
+        searcherd for alternative
+          babel - compiler (modern JS to core JS) Hiyaaa, I have it
+
+        How to use Babel on browser????? (http://discuss.babeljs.io/t/using-babel-in-the-browser-without-a-bundler/100/1)
+          can use jspm.io  (http://discuss.babeljs.io/t/using-babel-in-the-browser-without-a-bundler/100/3)
+
++++++++++++++++++++++++++++++++++++++++++++
+Great!!! both tests and browser are running (27.10.2017) - 
+******************************************* 
+

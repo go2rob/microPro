@@ -12,7 +12,7 @@
         "src",
         "test"
       ],
-      "extensions": "js,jsx",
+      "extensions": "js",
       "quiet": true,
       "legacyWatch": true,
       "delay": 2500
@@ -21,8 +21,8 @@
   "scripts": {
     "start": "http-server -p 8888 -c-1",
     "watch": "npm-watch",
-    "test": "nodemon --watch . --exec 'mocha --compilers js:babel-register --no-deprecation --require testHelper.js \"./test/*@(.js)\" || true'",
-    "debug": "node inspect node_modules/mocha/bin/_mocha  --compilers js:babel-register --no-deprecation --require testHelper.js \"./test/*@(.js)\" || true'"
+    "test": "nodemon --watch . --exec 'mocha -r babel-register -r testHelper.js \"./test/*@(.js)\"'",
+    "debug": "node inspect node_modules/mocha/bin/_mocha  -r babel-register -r testHelper.js \"./test/*@(.js)\""
   },
   "repository": {
     "type": "git",
@@ -38,10 +38,8 @@
   },
   "homepage": "https://github.com/go2rob/microPro#readme",
   "dependencies": {
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
+    "http-server": "^0.10.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "node-inspect": "^1.11.2",
@@ -50,6 +48,9 @@
     "webpack": "^3.8.1"
   },
   "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
     "npm-watch": "^0.3.0",
     "mocha": "^4.0.1",
     "chai": "^4.1.2",

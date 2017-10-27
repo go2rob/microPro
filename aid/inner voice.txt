@@ -1,0 +1,12 @@
+===> 27.10.2017
+test configuration settled (along with debugger)
+**************************
+
+index module
+  should have (create) functionality
+      should get the text as input (primary)
+      should 
+  should have (Memories) functionality
+    should not show memories functionality i.e. should return "nothing for today"
+    should show memories (preview or link) on same day pf the year
+  should have 
