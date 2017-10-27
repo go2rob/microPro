@@ -30,8 +30,8 @@ Mocha unable to read ES6
 When trying to load supporting libraries in reliable way(like in JS files, not as script in HTML)
   encountered the existence of "requirejs"
     2 days worked on to learn & finally configured in a common file(requirejs.config)
-    -supported great for browser but testfiles
-        no Idea what to do, dropped there...
+    -supported great for browser but for test files
+        no Idea what to do, dropped there...   <<<(https://github.com/go2rob/microPro/commit/b25c5ed9fdf1c32c3b1a96c6b7e5003046ab290d)>>>
   alternatives for requirejs... had come to know about "webpack is best doing the same" which I have already have
         configuration not understandable.. skipping for now
 
@@ -56,6 +56,6 @@ When loaded on browser
           can use jspm.io  (http://discuss.babeljs.io/t/using-babel-in-the-browser-without-a-bundler/100/3)
 
 +++++++++++++++++++++++++++++++++++++++++++
-Great!!! both tests and browser are running (27.10.2017) - 
+Great!!! both tests and browser are running (27.10.2017) - <<<(https://github.com/go2rob/microPro/commit/4e5bf0d2392c14b9d363bccc7d08b065389f8db1)>>>
 ******************************************* 
 
