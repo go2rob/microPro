@@ -1,8 +1,12 @@
 import index from "./index.js"
 System.import('jquery').then(function($) {
-  const app = () => {
-    index.test()
+  const indexPage = () => {
+    // index.displayImage()
+    index.displayButtons()
   }
   
-  app.call(this)
+  $(() => indexPage())
+  // $(window).resize(() => {
+  //   window.location.reload()
+  // })
 });

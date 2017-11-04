@@ -1,9 +1,34 @@
-.home-page-image {
+.test-image {
+  height: 100%;
   display: block;
+  margin: 0 auto;
   /*position: sticky;*/
-  z-index: 0;
-  height: 100;
+  z-index: -1;
 }
-.sec {
-  
-}
+ html {
+  background: #020100 url(../images/book.png) no-repeat center center fixed; 
+  background-size: contain;
+  margin: 20px 20px 20px 20px;
+ }
+ #testText {
+  font-family: serif;
+  -webkit-text-stroke: 2px #EFA42F;
+  -webkit-text-fill-color: #000000;
+  font-weight: bold;
+  letter-spacing: 0.40em;
+  font-size: 40px;
+  margin: 15px
+ }
+ #create, #view {
+  background-color: orange;
+  border-color: red;
+  border-radius: 5px;
+  cursor: pointer;
+  /*border: none;*/
+  color: black;
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+ }

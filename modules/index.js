@@ -1,24 +1,20 @@
-// import $ from "jquery"
+import * as factory from "./factory.js"
+const f = factory;
 const index = {
-  create: () => {
-    return ("function created")
+  displayButtons: () => {
+    f.createDiv("body", "button-panel")
+    f.createButton("Create", ".button-panel", "create", {"margin": 5})
+    f.createButton("View", ".button-panel", "view", {"margin": 5})
   },
-  
-  test: () => {
-    let src1 = "../images/bgimg.jpg"
+  inputFields: () => {
+    
+  },
+  displayImage: () => {
+    let book = "../images/book.png"
     let src2 = "../images/totem.jpg"
-    let height = $(window).height()
-    $('body').append('<img/>')
-    $('img').addClass('home-page-image')
-    $('.home-page-image').attr('src', src1).css('height', height)
+    let pageHeight = $(window).height()
+    $('<img/>').appendTo('body').addClass('test-image')
+    $('.test-image').attr('src', book).css('height', pageHeight)
   }
 }
-
-// snippets to check in browsers
-    // let src1 = "../images/bgimg.jpg"
-    // let src2 = "../images/totem.jpg"
-    // let height = $(window).height()
-    // $('body').append('<img/>')
-    // $('img').addClass('home-page-image')
-    // $('.home-page-image').attr('src', src1).css('height', height)
 export default index
