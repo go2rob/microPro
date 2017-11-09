@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "http-server -p 8888 -c-1 -o",
+    "start": "live-server --port=8888",
     "test": "nodemon --watch . --exec 'mocha -r babel-register -r testHelper.js \"./test/*@(.js)\"'",
     "debug": "node inspect node_modules/mocha/bin/_mocha  -r babel-register -r testHelper.js \"./test/*@(.js)\""
   },
@@ -27,6 +27,8 @@
   "dependencies": {
     "http-server": "^0.10.0",
     "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "less": "^2.7.3",
     "lodash": "^4.17.4",
     "node-inspect": "^1.11.2",
     "pg": "^7.3.0",
@@ -36,10 +38,11 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
-    "npm-watch": "^0.3.0",
-    "mocha": "^4.0.1",
     "chai": "^4.1.2",
     "jsdom": "11.3.0",
-    "jsdom-global": "3.0.2"
+    "jsdom-global": "3.0.2",
+    "mocha": "^4.0.1",
+    "npm-watch": "^0.3.0",
+    "watch-lessc": "0.0.3"
   }
 }

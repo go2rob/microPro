@@ -10,4 +10,5 @@ things to work on
 2. Lodash
 3. Promises & Generators
 
-
+  🐦
+  👈👉
