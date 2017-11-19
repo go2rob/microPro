@@ -1,5 +1,4 @@
-import * as factory from "./factory.js"
-const f = factory;
+import * as f from "./factory.js"
 const index = {
   openHomePage: () => {
     // BUILDING UP DOM
@@ -15,23 +14,18 @@ const index = {
     f.createDiv(".create-options", "create-past-days", "Past Days")
     f.createDiv(".view-options", "on-this-day", "On This Day")
     f.createDiv(".view-options", "pick-a-date", "Pick a Date")
-    f.createDiv("body", "date", "Pick a Date: ")
-    $(".date").css('color', 'white')
-    $("<input/>").appendTo(".date").attr('type', 'text').attr('id', 'picker')
-    let dp = () => { 
-      $("#picker").datepicker() 
-    }
-    dp()
-
-    // Preliminary builds
-    f.extendButtonMenu("#create-btn", ".create-options", "extend-button")
-    f.extendButtonMenu("#view-btn", ".view-options", "extend-button")
+    $('body').append("<div id=\"getDate\" title=\"\"></div>")
+    f.createButtonDropdown("#create-btn", ".create-options", "extend-button") // options for main button
+    f.createButtonDropdown("#view-btn", ".view-options", "extend-button")
+    f.dateSelector()
     // Actions
       // $(".create-today").on('click', openField())
-      // $("create-past-days").on('click', )
+      // $("create-past-days").on('click', f.openDatepicker(this))
       // $("on-this-day").on('click', )
       // $("pick-a-date").on('click', )
-
+  },
+  fireMouseEvents: () => {
+    f.dateSelector()
   },
   displayImage: () => {
     let book = "../images/book.png"
