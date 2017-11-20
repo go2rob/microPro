@@ -43,6 +43,17 @@ let myDateParser = (date) => {
   return new Date(parseInt(y), parseInt(m), parseInt(d))
 }
 
+let appendDateField = () => {
+  if ($("#picker").length === 0) {                  // to contol multiple append's
+    return $("<input/>").appendTo("#getDate").attr({
+      type: "search",
+      id: "picker",
+      readonly: "readonly",
+      placeholder: "Pick date"
+    })
+  } else null
+}
+
 let accessDatepicker = () => {
   let dateOfBirth = myDateParser("01/06/1996")      // Hardcoded - make it with a getter
   let yearRange = dateOfBirth.getFullYear() + ":" + "c" // c = current year (JQ UI)
@@ -57,41 +68,38 @@ let accessDatepicker = () => {
   })
 }
 
-let appendDateField = () => {
-  if ($("#picker").length === 0) {                  // to contol multiple append's
-    return $("<input/>").appendTo("#getDate").attr({
-      type: "search",
-      id: "picker",
-      readonly: "readonly",
-      placeholder: "Pick date"
-    })
-  } else null
-}
-
 let renderPickerDialog = () => {
   let dialog = $("#getDate").dialog({
     position: { at: "left+130 top+110"},
     height: $("#picker").height(),
     width: $("#picker").width(),
-  }).promise().then(() => {
-    appendDateField()
-  }).then(accessDatepicker()).then(() => {
-    $(".ui-dialog").css("display", "none")
-  })
+  }).promise()
+    .then(
+        () => appendDateField()
+        && accessDatepicker()
+        && $(".ui-dialog").css("display", "none")
+      )
   return dialog
 }
 
 let dateSelector = () => {
-  return $(".create-past-days, .pick-a-date").click(() => {
-    renderPickerDialog().then(() => {
-      $( "#getDate" ).dialog( "close" )
-    })
-  })
+  let render = () => renderPickerDialog() && $( "#getDate" ).dialog( "close" )
+  render()
+  //^--<Temporary Fixing (has to fire twice when clicked) 
+  return $(".create-past-days, .pick-a-date").click(() => render())
+  // let selectedDate = $("#picker").val()
+  // sendVal(selectedDate) not implemented
+}
+
+let displayDate = () => {   // displayDate method used to test explicitly(20.11.2017)
+  createButton("view selected date", ".button-panel", "test-button", {"background-color": "orange"})
+  $("#test-button").click(() => alert($("#picker").val()))
 }
 export {
   createDiv,
   createButton,
   createButtonDropdown,
   myDateParser,
-  dateSelector
+  dateSelector,
+  displayDate
 }

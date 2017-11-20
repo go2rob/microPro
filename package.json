@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "live-server --port=8888",
+    "start": "live-server --port=8880",
     "test": "nodemon --watch . --exec 'mocha -r babel-register -r testHelper.js \"./test/*@(.js)\"'",
     "debug": "node inspect node_modules/mocha/bin/_mocha  -r babel-register -r testHelper.js \"./test/*@(.js)\""
   },

@@ -7,10 +7,6 @@ import * as f from "./factory.js"
     }
   $(() => {
     indexPage()
-    window.addEventListener('load', () => { 
-      f.dateSelector()
-    }
-  , false);
   })
 //   })
 //   })

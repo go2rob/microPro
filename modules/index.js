@@ -17,17 +17,9 @@ const index = {
     $('body').append("<div id=\"getDate\" title=\"\"></div>")
     f.createButtonDropdown("#create-btn", ".create-options", "extend-button") // options for main button
     f.createButtonDropdown("#view-btn", ".view-options", "extend-button")
-    f.dateSelector()
-    // Actions
-      // $(".create-today").on('click', openField())
-      // $("create-past-days").on('click', f.openDatepicker(this))
-      // $("on-this-day").on('click', )
-      // $("pick-a-date").on('click', )
+    f.dateSelector() && f.displayDate() //  displayDate method used to test explicitly(20.11.2017)
   },
-  fireMouseEvents: () => {
-    f.dateSelector()
-  },
-  displayImage: () => {
+  displayImage: () => {      
     let book = "../images/book.png"
     let src2 = "../images/totem.jpg"
     let pageHeight = $(window).height()
